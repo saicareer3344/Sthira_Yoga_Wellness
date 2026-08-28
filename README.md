@@ -1,1 +1,102 @@
-# Sthira_Yoga_Wellness
+# Sthira Yoga & Wellness
+
+A calm, production-quality single-page website for **Sthira Yoga & Wellness** —
+traditional yoga wisdom with a modern, minimalist wellness experience.
+
+Built with **Vite + React + TypeScript**. No UI framework; a hand-rolled design
+system keeps the bundle small and the look bespoke.
+
+---
+
+## Quick start
+
+```bash
+npm install
+npm run dev      # local dev server on http://localhost:5173
+npm run build    # type-check + production build to dist/
+```
+
+---
+
+## Replacing placeholder content (owner guide)
+
+Everything temporary lives in **three places**. You never need to touch a
+component to update the site.
+
+### 1. Contact details, social links, logo, booking
+
+👉 `src/data/site.ts` — one file for:
+
+- studio name, tagline and descriptions
+- address / phone / WhatsApp / email
+- working hours
+- social links (`#` = shown as "coming soon")
+- logo file, wordmark and height
+- booking form heading + confirmation message
+- SEO title/description
+
+Set `booking.endpoint` to an HTTPS URL that accepts JSON POST and the booking
+form will start sending submissions there (until then it runs in demo mode and
+only shows the confirmation message).
+
+### 2. Photos
+
+👉 `public/assets/` — drop your own files **using the same names**, no code
+changes:
+
+```
+public/assets/
+  logo/sthira-logo.svg     ← your logo (update src in site.ts if the name changes)
+  hero/hero-main.jpg       ← hero background
+  hero/booking.jpg         ← booking side panel
+  about/intro.jpg          ← welcome section
+  about/philosophy.jpg     ← philosophy figure
+  about/approach.jpg       ← approach figure
+  founder/uma.jpg          ← founder portrait
+  trainers/uma.jpg         ← trainer card photos
+  trainers/prav.jpg
+  trainers/sl.jpg
+  gallery/gallery-01.jpg   ← gallery photos (edit captions in
+  gallery/gallery-02.jpg     src/data/gallery.ts when swapping)
+  ...
+  gallery/gallery-12.jpg
+```
+
+Recommended sizes: photos ≈ 1200px on the long edge, JPEG quality ~80
+(≈ 100–200 KB each) so the site stays fast.
+
+### 3. Text content
+
+| What                         | Where                          |
+| ---------------------------- | ------------------------------ |
+| Services / therapies         | `src/data/services.ts`         |
+| Trainers + founder bios      | `src/data/trainers.ts`         |
+| Testimonials ⚠️ placeholders | `src/data/testimonials.ts`     |
+| Gallery captions/categories  | `src/data/gallery.ts`          |
+| Navigation + "why" cards     | `src/data/navigation.ts`       |
+
+⚠️ **Before going live:** testimonials, trainer bios and the address/phone are
+deliberate placeholders. They are clearly marked in the data files and must be
+replaced with real, consented content.
+
+---
+
+## Accessibility & performance notes
+
+- Semantic landmarks, single `h1`, logical heading order, skip link.
+- Visible focus states, focus traps in the menu/lightbox/dialogs, `Esc` closes.
+- All motion respects `prefers-reduced-motion`.
+- Images lazy-load with graceful branded fallbacks; the hero preloads.
+- No tracking, no web fonts beyond Playfair Display + Inter (Google Fonts).
+
+## Project structure
+
+```
+src/
+  components/   one folder per section (Navbar, Hero, …, Footer)
+  data/         editable content (services, trainers, testimonials, site config)
+  hooks/        useReveal-style helpers (reduced motion, focus trap, …)
+  styles/       design tokens + global primitives
+  utils/        booking submit/validation
+public/assets/  swappable images (logo, hero, founder, trainers, gallery)
+```
