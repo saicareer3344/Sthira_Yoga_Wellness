@@ -46,7 +46,7 @@ changes:
 
 ```
 public/assets/
-  logo/sthira-logo.svg     ← your logo (update src in site.ts if the name changes)
+  logo/Sthira_logo.png     ← your logo (update src in site.ts if the name changes)
   hero/hero-main.jpg       ← hero background
   hero/booking.jpg         ← booking side panel
   about/intro.jpg          ← welcome section

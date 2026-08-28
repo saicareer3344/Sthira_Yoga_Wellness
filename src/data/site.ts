@@ -30,12 +30,12 @@ export const studioInfo = {
 
   /* -----------------------------------------------------------------------
    *  LOGO
-   *  Replace the file at `public/assets/logo/sthira-logo.svg` with your own
+  *  Replace the file at `public/assets/logo/Sthira_logo.png` with your own
    *  logo (SVG, PNG or JPG) and update `src` if the file name changes.
    *  Set `showWordmark: false` if your logo already includes the studio name.
    * --------------------------------------------------------------------- */
   logo: {
-    src: '/assets/logo/sthira-logo.svg',
+    src: '/assets/logo/Sthira_logo.png',
     alt: 'Sthira Yoga & Wellness — lotus emblem',
     /** Displayed height in pixels; width scales automatically. */
     height: 44,
