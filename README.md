@@ -81,6 +81,27 @@ replaced with real, consented content.
 
 ---
 
+## Deploying to GitHub Pages (free public link)
+
+A ready-to-serve production build lives in **`docs/`** on this branch, built
+with the `/Sthira_Yoga_Wellness/` base path.
+
+**One-time setup (repo owner, ~30 seconds):**
+
+1. Open **Settings → Pages**:
+   `https://github.com/saicareer3344/Sthira_Yoga_Wellness/settings/pages`
+2. *Build and deployment → Source* → **Deploy from a branch**
+3. *Branch* → `arena/01a0494f-sthira-yoga-wellness` · *Folder* → `/docs` → **Save**
+
+Within a minute the site is live at:
+
+```
+https://saicareer3344.github.io/Sthira_Yoga_Wellness/
+```
+
+**Updating later:** after content changes run `npm run build:pages`, commit the
+refreshed `docs/` folder and push — Pages redeploys automatically.
+
 ## Accessibility & performance notes
 
 - Semantic landmarks, single `h1`, logical heading order, skip link.
