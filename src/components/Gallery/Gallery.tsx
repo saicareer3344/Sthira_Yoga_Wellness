@@ -9,6 +9,7 @@ import {
   galleryImages,
   type GalleryCategory,
 } from '@/data/gallery'
+import pub from '@/utils/asset'
 import './Gallery.css'
 
 export function Gallery() {
@@ -108,7 +109,7 @@ export function Gallery() {
             >
               <Img
                 className="gallery__img"
-                src={image.src}
+                src={pub(image.src)}
                 alt={image.alt}
                 width={800}
                 height={image.span === 'tall' ? 1000 : 620}
@@ -171,7 +172,7 @@ export function Gallery() {
               <Img
                 key={current.id}
                 className="lightbox__img"
-                src={current.large ?? current.src}
+                src={pub(current.large ?? current.src)}
                 alt={current.alt}
                 width={1400}
                 height={1000}

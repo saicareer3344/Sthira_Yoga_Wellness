@@ -5,6 +5,7 @@ import Reveal from '@/components/ui/Reveal'
 import { Section } from '@/components/ui/Section'
 import { siteImages } from '@/data/gallery'
 import { contactLinks, studioInfo } from '@/data/site'
+import pub from '@/utils/asset'
 import {
   bookingWhatsAppLink,
   emptyBooking,
@@ -141,7 +142,7 @@ export function BookingForm() {
           <div className="booking__aside-media">
             <Img
               className="booking__aside-img"
-              src={siteImages.booking.src}
+              src={pub(siteImages.booking.src)}
               alt={siteImages.booking.alt}
               width={720}
               height={540}

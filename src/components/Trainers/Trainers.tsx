@@ -3,6 +3,7 @@ import Img from '@/components/ui/Img'
 import Reveal from '@/components/ui/Reveal'
 import { Section, SectionHead } from '@/components/ui/Section'
 import { trainers } from '@/data/trainers'
+import pub from '@/utils/asset'
 import './Trainers.css'
 
 export function Trainers() {
@@ -23,7 +24,7 @@ export function Trainers() {
               <div className="trainer-card__media">
                 <Img
                   className="trainer-card__img"
-                  src={trainer.image}
+                  src={pub(trainer.image)}
                   alt={trainer.imageAlt}
                   width={600}
                   height={720}

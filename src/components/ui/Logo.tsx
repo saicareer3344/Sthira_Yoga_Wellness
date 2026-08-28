@@ -1,4 +1,5 @@
 import { studioInfo } from '@/data/site'
+import pub from '@/utils/asset'
 import './Logo.css'
 
 export interface LogoProps {
@@ -22,7 +23,7 @@ export function Logo({ asLink = true, variant = 'default', className = '' }: Log
     <>
       <img
         className="logo__mark"
-        src={logo.src}
+        src={pub(logo.src)}
         alt=""
         aria-hidden="true"
         width={logo.height}

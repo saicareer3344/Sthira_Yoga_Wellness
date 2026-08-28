@@ -3,6 +3,7 @@ import Img from '@/components/ui/Img'
 import Reveal from '@/components/ui/Reveal'
 import { siteImages } from '@/data/gallery'
 import { cta } from '@/data/navigation'
+import pub from '@/utils/asset'
 import './Intro.css'
 
 const INTRO_HIGHLIGHTS = [
@@ -22,7 +23,7 @@ export function Intro() {
           <div className="intro__frame">
             <Img
               className="intro__img"
-              src={siteImages.intro.src}
+              src={pub(siteImages.intro.src)}
               alt={siteImages.intro.alt}
               width={720}
               height={900}

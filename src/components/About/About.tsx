@@ -4,6 +4,7 @@ import Reveal from '@/components/ui/Reveal'
 import { SectionHead } from '@/components/ui/Section'
 import { siteImages } from '@/data/gallery'
 import { approachSteps } from '@/data/navigation'
+import pub from '@/utils/asset'
 import './About.css'
 
 const VALUES = [
@@ -49,7 +50,7 @@ export function About() {
             <figure className="about__figure">
               <Img
                 className="about__img"
-                src={siteImages.philosophy.src}
+                src={pub(siteImages.philosophy.src)}
                 alt={siteImages.philosophy.alt}
                 width={760}
                 height={560}
@@ -106,7 +107,7 @@ export function About() {
             <figure className="about__figure about__figure--tall">
               <Img
                 className="about__img"
-                src={siteImages.approach.src}
+                src={pub(siteImages.approach.src)}
                 alt={siteImages.approach.alt}
                 width={760}
                 height={940}

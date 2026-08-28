@@ -2,6 +2,7 @@ import { Icon } from '@/components/ui/Icons'
 import { siteImages } from '@/data/gallery'
 import { BOOKING_ANCHOR, cta } from '@/data/navigation'
 import { studioInfo } from '@/data/site'
+import pub from '@/utils/asset'
 import './Hero.css'
 
 const HERO_POINTS = ['Yoga therapy', 'Pranayama & meditation', 'Gentle, mindful movement']
@@ -10,7 +11,7 @@ export function Hero() {
   return (
     <section id="home" className="hero" aria-labelledby="hero-title">
       <div className="hero__media" aria-hidden="true">
-        <img className="hero__img" src={siteImages.hero.src} alt="" fetchPriority="high" decoding="async" />
+        <img className="hero__img" src={pub(siteImages.hero.src)} alt="" fetchPriority="high" decoding="async" />
         <div className="hero__scrim" />
         <div className="hero__grain" />
       </div>

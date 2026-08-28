@@ -2,6 +2,7 @@ import { Icon } from '@/components/ui/Icons'
 import Img from '@/components/ui/Img'
 import Reveal from '@/components/ui/Reveal'
 import { founder } from '@/data/trainers'
+import pub from '@/utils/asset'
 import './Founder.css'
 
 export function Founder() {
@@ -15,7 +16,7 @@ export function Founder() {
           <div className="founder__frame">
             <Img
               className="founder__img"
-              src={founder.image}
+              src={pub(founder.image)}
               alt={founder.imageAlt}
               width={760}
               height={900}

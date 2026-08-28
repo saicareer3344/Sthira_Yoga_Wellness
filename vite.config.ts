@@ -3,7 +3,9 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
+// GITHUB_PAGES=1 builds for https://<user>.github.io/<repo>/ (project sub-path).
 export default defineConfig({
+  base: process.env.GITHUB_PAGES === '1' ? '/Sthira_Yoga_Wellness/' : '/',
   plugins: [react()],
   resolve: {
     alias: {
